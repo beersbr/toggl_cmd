@@ -175,7 +175,7 @@ def do_stop(args):
 
 	d = stop_time_for_project(config["api_token"], time_entry)
 
-	print "Stopped '" + str(d["data"]["description"]) + "'. You worked for: " + str(d["data"]["duration"]/60) + "minutes"
+	print "Stopped '" + str(d["data"]["description"]) + "'. You worked for: " + str(d["data"]["duration"]/60.0) + " minutes"
 
 	os.remove(".toggl-working")
 
